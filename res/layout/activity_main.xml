@@ -4,18 +4,18 @@
     android:layout_height="match_parent" >
     
     <EditText
-        android:id="@+id/search_field"
+        android:id="@+id/venue_search_box"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/search_bar_hint"
         android:inputType="textWebEditText" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:id="@+id/venue_search_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/search_field"
-        android:text="@string/search_button_text"
-        android:onClick="processSearch" />
+        android:layout_below="@+id/venue_search_box"
+        android:text="@string/search_button_text" />
 
 </RelativeLayout>
