@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
             	String locationName = venueLocationEditText.getText().toString();
             	String itemTypeName = itemTypeEditText.getText().toString();
 
-            	String queryURL = String.format("https://api.foursquare.com/v2/venues/search?near=%s&query=%s&oauth_token=QACJSDUFJ3DOW052FAJISK2XECZ212RC5YJ3KVXCSABUQ5X3&v=20121025", locationName, itemTypeName);
+            	String queryURL = String.format("https://api.foursquare.com/v2/venues/search?near=%s&query=%s&CLIENT_ID=YTOBZF505OFWDYY4MJVIJLUJGKMXC11OMQSU1MMNJOXICDB5&CLIENT_SECRET=MWUQPIKRTYSLLO23EPRPZTVEBIKXVS0APNXGH1JETJ2YPUX3&v=20121025", locationName, itemTypeName);
             	processSearch(queryURL);
             }
         });
