@@ -6,6 +6,5 @@
     <string name="search_bar_hint">Search&#8230;</string>
     <string name="search_button_text">Submit</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_process_search">ProcessSearchActivity</string>
 
 </resources>
