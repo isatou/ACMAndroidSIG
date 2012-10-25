@@ -9,7 +9,9 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 	
-	private EditText venueSearchEditText;
+	private EditText venueLocationEditText;
+	private EditText itemTypeEditText;
+
 
 	public final static String EXTRA_MESSAGE = "acm.ccny.menuratingapp.MESSAGE";
 	
@@ -18,13 +20,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);    
         
-        venueSearchEditText = (EditText) findViewById(R.id.venue_search_box);
+        venueLocationEditText = (EditText) findViewById(R.id.venue_location_edittext);
+        itemTypeEditText = (EditText) findViewById(R.id.item_type_edittext);
+
         Button submitVenueSearchQueryButton = (Button) findViewById(R.id.venue_search_button);
         
         submitVenueSearchQueryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	String locationName = venueSearchEditText.getText().toString();
+            	String locationName = venueLocationEditText.getText().toString();
+            	String itemTypeName = itemTypeEditText.getText().toString();
 
+            	String queryURL = String.format("https://api.foursquare.com/v2/venues/search?near=%s&query=%s&oauth_token=QACJSDUFJ3DOW052FAJISK2XECZ212RC5YJ3KVXCSABUQ5X3&v=20121025", locationName, itemTypeName);
+            	processSearch(queryURL);
             }
         });
     }
@@ -37,7 +44,6 @@ public class MainActivity extends Activity {
     
     //listener for search button
     public void processSearch (String queryURL) {
-    	
-    	
-    }//function processSearch
+    	System.out.println(queryURL);    	
+    }
 }
