@@ -4,17 +4,26 @@
     android:layout_height="match_parent" >
     
     <EditText
-        android:id="@+id/email_address"
+        android:id="@+id/venue_location_edittext"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/search_bar_hint"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/location_text_field_hint"
+        android:inputType="textWebEditText" />
+    
+    <EditText
+        android:id="@+id/item_type_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_type_text_field_hint"
+        android:layout_below="@+id/venue_location_edittext"
+        android:inputType="textWebEditText" />
 
     <Button
+        android:id="@+id/venue_search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/email_address"
+        android:layout_below="@+id/item_type_edittext"
         android:text="@string/search_button_text" />
 
 </RelativeLayout>
